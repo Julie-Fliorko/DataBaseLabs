@@ -1,0 +1,24 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/julie_fliorko_db?useUnicode=true&amp;serverTimezone=UTC</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">julie</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+
+        <mapping class="com.example.model.entity.Country"/>
+        <mapping class="com.example.model.entity.Film"/>
+        <mapping class="com.example.model.entity.Country"/>
+        <mapping class="com.example.model.entity.FunFact"/>
+        <mapping class="com.example.model.entity.ProductionCompany"/>
+        <mapping class="com.example.model.entity.Review"/>
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
